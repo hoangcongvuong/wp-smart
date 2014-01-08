@@ -1,0 +1,45 @@
+#error-content{
+	font-family:arial;
+}
+
+#error-content  h1, #error-content  h2{
+	font-family:UTM-Androgyne
+}
+
+#error-page-sidebar {
+	float: left;
+}
+
+#error-content ul li {
+list-style: disc;
+margin-left: 20px;
+}
+
+#error-content li {
+line-height: 30px;
+}
+
+#error-content a {
+color: rgb(2, 142, 209);
+}
+
+#error-page-sidebar form {
+margin: 10px 0;
+}
+
+.hcv-google-search {
+max-width: 300px;
+max-height: 100px;
+}
+
+#error-page-content {
+text-align: center;
+}
+
+#error-content input[type="image"] {
+background: rgb(207, 222, 90);
+font-weight: bold;
+border: 1px solid rgb(142, 156, 31);
+border-radius: 5px 30px 30px 5px;
+}
+

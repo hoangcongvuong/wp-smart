@@ -1,0 +1,139 @@
+*{
+	font-family:arial;
+	margin:0;
+	padding:0;
+	list-style:none;
+	outline: none;
+}
+
+body{
+	background: rgb(241, 241, 241);
+}
+
+.clear{
+	clear:both;
+}
+
+.pointer{
+	cursor:pointer;
+}
+
+#opacity{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1
+}
+
+#wrap-alert{
+	height:50px;
+}
+
+#alert{
+	padding:10px;
+	color:green;
+}
+
+
+#popup textarea{
+    width: 716px;
+}
+.action{
+	border: 1px solid #666666;
+	margin:10px;
+	border-radius:4px;
+	text-align:center;
+	float:left;
+	padding: 6px;
+	background: #fff url(../images/add.jpg) no-repeat 0;
+	padding-left: 33px;
+	font-weight:bold;
+}
+
+.action:hover{
+	
+	color:green;
+}
+
+#popup{
+    position:relative;
+    width: 787px;
+}
+
+form{
+	position: relative;
+	border: 1px solid #B7E5A1;
+	padding: 4px 14px 13px;
+	border-radius: 5px;
+	width: 746px;
+	margin: 10px;
+}
+
+.form  *{
+	border-radius:5px;
+	border:1px solid #e6e6e6;
+	padding:5px 10px;
+	margin:10px 10px 0 0;
+}
+
+.form select{
+	min-width:100px;
+}
+
+
+#refresh{
+	background: url(../images/refresh.jpg) no-repeat 0 #fff;
+}
+
+
+form .close{
+	padding:10px!important;
+	background: url(../images/close.png) no-repeat right top;
+	border:none!important;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+.add-option{
+	background: url(../images/add.jpg) no-repeat right top;
+}
+
+#wrap-add-table{
+}
+
+#get-content{
+	background: url(../images/get.jpg) no-repeat 0 #fff;
+}
+
+#create-theme-options{
+	background: url(../images/create.jpg) no-repeat 0 #fff;
+}
+
+#content-file-themeoptions{
+	position:fixed;
+	z-index:11;
+	top: 6px;
+	left: 174px;
+	margin: auto;
+	border-radius: 11px;
+	overflow: hidden;
+}
+
+#vmz{
+    position: absolute;
+    right: 0px;
+    background: rgb(169, 181, 199);
+    bottom: -44px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#close-content-file-themeoptions{
+    padding:10px!important;
+	background: url(../images/close.png) no-repeat right top;
+	border:none!important;
+	position:absolute;
+    top: 15px;
+    right: 33px;
+}

@@ -1,0 +1,27 @@
+#searchform div{
+    float:right;
+    font-style: italic;
+}
+
+#s{
+    width: 282px;
+    padding: 7px;
+    background:#fff;
+    border: 1px solid #D1D1D1;
+    outline: none;
+    font-style: italic;
+}
+
+#searchsubmit{
+    background:white;
+  	border:none;
+    margin-left:-30px;
+  	border-radius:5px;
+    padding: 8px 8px;
+    color:white;
+    background: url(images/search_btn.png) no-repeat right 11px;
+    cursor:pointer;
+    top:-2px;
+    right:5px;
+}
+

@@ -1,0 +1,21 @@
+- Theme options
+	+ Text
+	+ Textarea
+	+ Upload
+	+ Select
+		+ Categories Selector
+		+ Posts Selector
+		+ ...
+	+ Check box
+	
+- Widgets
+	+ Facebook
+	+ Video
+	+ Image with link
+	+ Category
+	+ Suport
+	+ ...
+- Menus
+- Boxs
+- Breadcrums
+- Paginati

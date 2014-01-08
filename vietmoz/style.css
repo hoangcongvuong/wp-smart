@@ -1,0 +1,119 @@
+/*
+Theme Name:     Vietmoz
+Theme URI:      http://vietcode.vns/
+Description:    Created by team code
+Author:         Hoàng Công Vường
+Author URI:     http://hoangcongvuong.com/
+Version:        0.1.0
+*/
+/**
+ * RESET CSS
+ */
+*{
+    padding:0;
+    margin:0;
+}
+
+*:focus{
+    outline:none;
+}
+
+a{
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+
+
+ol, ul,li{
+    list-style:none;
+}
+
+
+/**
+ * COMMON STYLE
+ */
+.clear{
+    clear:both;
+}
+
+
+
+.floatl{
+    float:left;
+}
+
+.floatr{
+    float:right;
+}
+
+.uppercase{
+    text-transform:uppercase;
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.italic{
+    font-style:italic;
+}
+
+.line-through{
+    text-decoration:line-through;
+}
+
+.relative{
+    position:relative;
+}
+
+.absolute{
+    position:absolute;
+}
+
+.full{
+    width:980px;
+    margin:auto;
+}
+
+.center{
+    text-align:center;
+}
+
+.pointer{
+    cursor:pointer;
+}
+
+/**
+ * FONT-FAMILY
+ */
+.arial{
+    font-family:arial;
+}
+
+.MyriadPro-Regular{
+    font-family:MyriadPro-Regular;
+}
+
+
+
+@font-face {
+	font-family: MyriadPro-Regular;  
+	src: local('MyriadPro-Regular'), 
+		url("fonts/MyriadPro-Regular.ttf") format('truetype');  
+	font-weight: normal;  
+}
+
+/**
+ * COLOR
+ */
+.color-ffffff{
+    color:#ffffff;
+} 
+
+
+
+

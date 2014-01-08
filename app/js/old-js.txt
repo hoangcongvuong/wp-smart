@@ -1,0 +1,172 @@
+$(document).ready(function(){
+	$(".close").live('click',function(){
+		s = 1;
+		$(".popup").remove();
+	});
+	
+	
+
+	//ADD TABLE
+	var s = 1;
+	$("#add-table").live('click', function(){
+		//$(".popup").remove();
+		if( s == 1 )
+		{
+			$(this).after("<form class='form popup' id='add-table-popup-form'><input id='input-talbe-name' type='text' /><span class='close pointer'>&nbsp</span><span class='pointer' id='btn-add-talbe'>Ok</span></form>");
+			s = 0;	
+		}
+		$("#input-talbe-name").focus();		
+	});	
+	
+	$("#btn-add-talbe").live("click",function(){
+		$.post(
+			"add-table.php",
+			{
+				name:$("#input-talbe-name").val()
+			},
+			function(data,status)
+			{
+				if(status=='success')
+				{
+					$("#add-table-popup-form").remove();
+					$("#alert").empty();
+					$("#alert").css("display","block");
+					$("#alert").append(data);
+					$("#alert").fadeOut(2000);
+					s = 1;
+				}
+				else
+				{
+					alert("Error");
+				}
+			}
+		);
+	});
+	
+	
+	
+	//ADD CONTENT
+	
+	$("#add-content").live('click', function(){
+		//$(".popup").remove();
+		if( s == 1 )
+		{
+			$(this).after("<form class='form popup' id='add-content-popup-form'><input id='input-content-name' type='text' /><br /><textarea id='text-area' cols='180' rows='20'></textarea><br />Thêm vào <select class='popup' id='select-table'><option value='most_functions'>Most Functions</option><option value='blocks'>Blocks</option><option value='widgets'>Widgets</option><option value='theme_options'>Theme Options</option></select><span class='close pointer'>&nbsp</span><span class='pointer' id='btn-add-content'>Ok</span></form>");
+			s = 0;	
+		}
+		$("#input-content-name").focus();		
+	});
+	
+	$("#btn-add-content").live("click",function(){
+		$.post(
+			"add-content.php",
+			{
+				label:$("#input-content-name").val(),
+				content:$("#text-area").val(),
+				table:$("#select-table").val()
+			},
+			function(data,status)
+			{
+				if(status=='success')
+				{
+					$("#add-content-popup-form").remove();
+					$("#alert").empty();
+					$("#alert").css("display","block");
+					$("#alert").append(data);
+					$("#alert").fadeOut(2000);
+					s = 1;
+				}
+				else
+				{
+					alert("Error");
+				}
+			}
+		);
+	});
+	
+	
+	
+	// GET CONTENT
+	$("#get-content").live('click', function(){
+		//$(".popup").remove();
+		if( s == 1 )
+		{
+			$(this).after("<form class='form popup' id='get-content-popup-form'>Chọn <select class='popup' id='get-table'><option value=''>- Chọn -</option><option value='most_functions'>Most Functions</option><option value='blocks'>Blocks</option><option value='widgets'>Widgets</option><option value='theme_options'>Theme Options</option></select><span class='close pointer'>&nbsp</span></form>");
+			s = 0;	
+		}
+		$("#input-content-name").focus();		
+	});
+	
+	$("#get-table").live("change",function(){
+		$("#content").remove();
+		$("#table").remove();
+		$("#btn-get-content").remove();
+		$.post(
+			"get-content.php",
+			{
+				table:$("#get-table").val()
+			},
+			function(data,status)
+			{			
+				if(status=='success')
+				{
+					$("#get-content-popup-form").append(data);
+				}
+				else
+				{
+					alert("Error");
+				}
+			}
+		);
+	});
+	
+	$("#table").live("change",function(){
+		$.post(
+			"get-content.php",
+			{
+				table:$("#get-table").val(),
+				id:$("#table").val()
+			},
+			function(data,status)
+			{			
+				if(status=='success')
+				{
+					$("#content").remove();
+					$("#get-content-popup-form").append(data);
+					$("#content").select();
+					$("#content").focus();
+				}
+				else
+				{
+					alert("Error");
+				}
+			}
+		);
+	});
+	
+	
+	//CREATE THEME OPTIONS
+	$("#create-theme-options").live("click", function(){
+		if(s == 1)
+		{
+			$.get(
+			"create-theme-options.php",
+			function(data)
+			{
+				$("#create-theme-options").after(data);
+			}
+		);	
+		s = 0;
+		}
+	});
+	
+	$(".add-option").live("click", function(){
+		$.get(
+			"create-theme-options.php",
+			function(data)
+			{
+				$("#create-theme-options").after(data);
+			}
+		)
+	});
+});
