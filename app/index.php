@@ -1,4 +1,5 @@
-<?php  
+<?php 
+	// Hello Vuong
 	// $con = mysqli_connect('localhost', 'root', 'congvuong', 'wp-smart');
 	$con = mysqli_connect('localhost', 'root', 'congvuong', 'wp-smart') or die('die');
 	
